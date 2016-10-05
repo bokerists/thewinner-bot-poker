@@ -28,7 +28,7 @@ exports = module.exports = {
 
     console.log(`Currently playing tournament ${gamestate.tournamentId}`);
 
-    return gamer(gamestate);
+    return gamer.init(gamestate);
 
   }
 
