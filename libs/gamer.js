@@ -38,7 +38,7 @@ const g = {
     }
 
     if (carloBot.hasCoppia(cards) || carloBot.hasTris(cards) || carloBot.hasPoker(cards)
-   || carloBot.hasFull(cards) || carloBot.hasDoppiaCoppia(cards)) {
+   || carloBot.hasFull(cards)  || carloBot.hasDoppiaCoppia(cards) || carloBot.hasColore(cards)) {
       return gs.minimumRaiseAmount;
     }
 
