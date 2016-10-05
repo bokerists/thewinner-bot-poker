@@ -8,6 +8,12 @@
     "body-parser": "1.15.2"
   },
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "test": "node ./test/gamer.test.js | tap-spec",
+    "push": "git commit -am \"Next commit\" && git push"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   }
 }

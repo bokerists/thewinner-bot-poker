@@ -1,3 +1,4 @@
+const gamer = require('./libs/gamer');
 
 exports = module.exports = {
 
@@ -21,9 +22,13 @@ exports = module.exports = {
 
     'use strict';
 
+
+
+
+
     console.log(`Currently playing tournament ${gamestate.tournamentId}`);
 
-    return 0;
+    return gamer(gamestate);
 
   }
 
