@@ -48,7 +48,7 @@ const g = {
       bet = gs.minimumRaiseAmount;
     }
 
-    if (preFlop && !carloBot.hasCoppia(cards)) {
+    if (preFlop && !carloBot.sklanskyCluster(playerCards) >= 6) {
       return 0;
     }
 
