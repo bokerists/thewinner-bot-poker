@@ -33,7 +33,7 @@ const g = {
       return Infinity;
     }
 
-    if (g.activePlayers(gs) === 2) {
+    if (g.activePlayers(gs) === 2 && carloBot.hasCoppia(cards)) {
       return Infinity;
     }
 
