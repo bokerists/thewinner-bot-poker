@@ -19,6 +19,9 @@
       "extensions": "js"
     }
   },
+  "engines": {
+    "node": "6.7.0"
+  },
   "scripts": {
     "start": "node index",
     "test": "node test/gamer.test.js | tap-spec && npm run push",

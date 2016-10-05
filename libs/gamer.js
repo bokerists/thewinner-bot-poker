@@ -1,4 +1,4 @@
-'use strict';
+
 const carloBot = require('botpoker-card-detection')
 
 const g = {
