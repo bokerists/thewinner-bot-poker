@@ -4,6 +4,7 @@ const g = {
 
   getMe(gs) {
     return gs.players.reduce(function (result, player) {
+      console.log(player.id);
       if (player.id == gs.me) {
         return player;
       }
@@ -20,6 +21,8 @@ const g = {
     const me = g.getMe(gs);
     const playerCards = g.parsePlayerCards(gs);
     const tableCards = gs.commonCards;
+
+    console.log(me);
 
 
     return gs.minimumRaiseAmount;
