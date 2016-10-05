@@ -18,6 +18,7 @@ const g = {
     const me = g.getMe(gs);
     const playerCards = g.parsePlayerCards(gs)
 
+    console.log(me);
 
 
     return gs.minimumRaiseAmount;
