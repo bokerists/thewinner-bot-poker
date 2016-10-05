@@ -22,10 +22,6 @@ exports = module.exports = {
 
     'use strict';
 
-
-
-
-
     console.log(`Currently playing tournament ${gamestate.tournamentId}`);
 
     return gamer.init(gamestate);
