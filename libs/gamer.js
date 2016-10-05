@@ -1,3 +1,5 @@
+const detector = require('botpoker-card-detection')
+
 const g = {
 
   getMe(gs) {
