@@ -21,8 +21,6 @@ const g = {
     const playerCards = g.parsePlayerCards(gs);
     const tableCards = gs.commonCards;
 
-    console.log(me);
-
 
     return gs.minimumRaiseAmount;
   }
