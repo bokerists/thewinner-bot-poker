@@ -10,7 +10,7 @@ module.exports = {
     "commonCards": [],
     "players": [
         {
-            "id": 0,
+            "id": "57f52baa22606f0003da625d",
             "name": "Arale",
             "status": "active",
             "cards": [
@@ -27,7 +27,7 @@ module.exports = {
             "chipsBet": 0
         },
         {
-            "id": 1,
+            "id": "57f52baa22606f0003da625d",
             "name": "Marvin",
             "status": "out",
             "cards": [
@@ -44,7 +44,7 @@ module.exports = {
             "chipsBet": 0
         },
         {
-            "id": 2,
+            "id": "57f52baa22606f0003da625d",
             "name": "R2D2",
             "status": "folded",
             "cards": [
@@ -61,7 +61,7 @@ module.exports = {
             "chipsBet": 0
         },
         {
-            "id": 3,
+            "id": "57f52baa22606f0003da625d",
             "name": "Bender",
             "status": "active",
             "cards": [
@@ -78,7 +78,7 @@ module.exports = {
             "chipsBet": 25
         },
         {
-            "id": 4,
+            "id": "57f52baa22606f0003da625d",
             "name": "Emilio",
             "status": "active",
             "cards": [

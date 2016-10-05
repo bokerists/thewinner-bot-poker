@@ -3,9 +3,9 @@ const detector = require('botpoker-card-detection')
 const g = {
 
   getMe(gs) {
-    return gs.players.reduce(function (result, player) {
-      console.log(player.id);
-      if (player.id == gs.me) {
+    return gs.players.reduce(function (result, player, index) {
+      console.log(parseInt(gs.me), index);
+      if (parseInt(gs.me) === index) {
         return player;
       }
       return result;
