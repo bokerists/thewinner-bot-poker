@@ -18,7 +18,7 @@
     "start": "node index",
     "test": "node test/gamer.test.js | tap-spec | npm run push",
     "watch": "npm-watch",
-    "push": "git commit -am \"Next commit\" && git push"
+    "push": "git commit -am \"Next commit\" | git push"
   },
   "devDependencies": {
     "npm-watch": "^0.1.6",
