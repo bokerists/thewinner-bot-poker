@@ -37,9 +37,15 @@ const g = {
       return Infinity;
     }
 
+    if (carloBot.hasCoppia(cards) || carloBot.hasTris(cards) || carloBot.hasCoppia(cards)
+   || carloBot.hasFull(cards) || carloBot.hasDoppiaCoppia(cards)) {
+      return gs.minimumRaiseAmount;
+    }
+
+    return gs.callAmount;
+
     console.log('Current cards:', cards);
 
-    return bet | gs.minimumRaiseAmount;
   }
 
 }
