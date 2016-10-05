@@ -1,4 +1,4 @@
-module.exports = {
+const mock = {
     "tournamentId": "56ec25834c87d903006f3f8b",
     "game": 1,
     "round": 1,
@@ -99,4 +99,12 @@ module.exports = {
     "me": 1,
     "callAmount": 50,
     "minimumRaiseAmount": 100
+};
+
+module.exports = {
+
+  get() {
+    return Object.assign({}, mock);
+  }
+
 };
