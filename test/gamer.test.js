@@ -26,10 +26,10 @@ tape('Init return a number', function (t) {
 })
 
 
-tape('Player Card parser', function (t) {
+tape('Player Card', function (t) {
 
-  const result =  g.parsePlayerCards(gameStateMock);
-  const expected = true;
+  const result =  typeof g.parsePlayerCards(gameStateMock);
+  const expected = typeof [];
 
   t.equal(result, expected);
 

@@ -1,10 +1,9 @@
-const detector = require('botpoker-card-detection')
+const carloBot = require('botpoker-card-detection')
 
 const g = {
 
   getMe(gs) {
     return gs.players.reduce(function (result, player, index) {
-      console.log(parseInt(gs.me), index);
       if (parseInt(gs.me) === index) {
         return player;
       }
@@ -13,19 +12,23 @@ const g = {
   },
 
   parsePlayerCards(gs) {
-    return true;
+    return this.getMe(gs).cards;
   },
 
   init(gs) {
 
+    let bet = 0;
+
     const me = g.getMe(gs);
     const playerCards = g.parsePlayerCards(gs);
     const tableCards = gs.commonCards;
+    const cards = playerCards.concat(tableCards)
 
-    console.log(me);
+    console.log('Current cards:', cards);
 
 
-    return gs.minimumRaiseAmount;
+
+    return bet | gs.minimumRaiseAmount;
   }
 
 }
