@@ -18,7 +18,8 @@ const g = {
   init(gs) {
 
     const me = g.getMe(gs);
-    const playerCards = g.parsePlayerCards(gs)
+    const playerCards = g.parsePlayerCards(gs);
+    const tableCards = gs.commonCards;
 
     console.log(me);
 
