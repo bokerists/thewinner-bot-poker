@@ -50,3 +50,14 @@ tape('Get ME', function (t) {
 
   t.end();
 })
+
+tape('Active Players', function (t) {
+  const gameStateMock = gameStateMocker.get(cardsMock.coppia);
+
+  const result = g.activePlayers(gameStateMock);
+  const expected = 3;
+
+  t.ok(result, expected);
+
+  t.end();
+})

@@ -16,6 +16,10 @@ const g = {
     return this.getMe(gs).cards;
   },
 
+  activePlayers(gs) {
+    return gs.players.filter(g => g.status === 'active').length;
+  },
+
   init(gs) {
 
     let bet = 0;
