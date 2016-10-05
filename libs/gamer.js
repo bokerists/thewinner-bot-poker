@@ -27,7 +27,11 @@ const g = {
     const me = g.getMe(gs);
     const playerCards = g.parsePlayerCards(gs);
     const tableCards = gs.commonCards;
-    const cards = playerCards.concat(tableCards)
+    const cards = playerCards.concat(tableCards);
+
+    if (g.activePlayers(gs) === 2) {
+      bet = Infinity;
+    }
 
     console.log('Current cards:', cards);
 
