@@ -29,13 +29,15 @@ const g = {
     const tableCards = gs.commonCards;
     const cards = playerCards.concat(tableCards);
 
+    if (carloBot.hasPoker(cards)) {
+      return Infinity;
+    }
+
     if (g.activePlayers(gs) === 2) {
-      bet = Infinity;
+      return Infinity;
     }
 
     console.log('Current cards:', cards);
-
-
 
     return bet | gs.minimumRaiseAmount;
   }
