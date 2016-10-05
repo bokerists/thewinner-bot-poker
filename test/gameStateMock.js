@@ -105,6 +105,18 @@ module.exports = {
 
   get() {
     return Object.assign({}, mock);
+  },
+
+  setPlayerCards(cards) {
+    const mock = Object.assign({}, mock);
+
+    mock.players[1].cards = cards;
+
+    return mock;
+  },
+
+  setCommonCards() {
+    return Object.assign({}, mock, { commonCards: cards });
   }
 
 };
