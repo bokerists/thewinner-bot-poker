@@ -103,20 +103,19 @@ const mock = {
 
 module.exports = {
 
-  get() {
-    return Object.assign({}, mock);
-  },
+  get(cards, playerCards) {
 
-  setPlayerCards(cards) {
-    const mock = Object.assign({}, mock);
+    const m = Object.assign({}, mock);
 
-    mock.players[1].cards = cards;
+    if (playerCards) {
+      m.players[1].cards = cards;
+    }
 
-    return mock;
-  },
+    if (cards) {
+      m.commonCards = cards;
+    }
 
-  setCommonCards() {
-    return Object.assign({}, mock, { commonCards: cards });
+    return m;
   }
 
 };

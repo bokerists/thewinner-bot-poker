@@ -7,8 +7,8 @@ const cardsMock = require('./cards');
 
 tape('Player Work', function (t) {
 
-  const gameStateMock = gameStateMocker.get();
-  
+  const gameStateMock = gameStateMocker.get(cardsMock.coppia);
+
   const result = typeof player.bet(gameStateMock);
   const expected = typeof 1;
 
@@ -18,7 +18,7 @@ tape('Player Work', function (t) {
 })
 
 tape('Init return a number', function (t) {
-  const gameStateMock = gameStateMocker.get();
+  const gameStateMock = gameStateMocker.get(cardsMock.coppia);
 
   const result = typeof g.init(gameStateMock);
   const expected = typeof 1;
@@ -30,7 +30,7 @@ tape('Init return a number', function (t) {
 
 
 tape('Player Card', function (t) {
-  const gameStateMock = gameStateMocker.get();
+  const gameStateMock = gameStateMocker.get(cardsMock.coppia);
 
   const result =  typeof g.parsePlayerCards(gameStateMock);
   const expected = typeof [];
@@ -41,7 +41,7 @@ tape('Player Card', function (t) {
 })
 
 tape('Get ME', function (t) {
-  const gameStateMock = gameStateMocker.get();
+  const gameStateMock = gameStateMocker.get(cardsMock.coppia);
 
   const result =  g.getMe(gameStateMock).name;
   const expected = 'Marvin';
