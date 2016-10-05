@@ -29,6 +29,12 @@ const g = {
     const tableCards = gs.commonCards;
     const cards = playerCards.concat(tableCards);
 
+    let river = cards.length === 5;
+    let turn = cards.length === 4;
+    let preRiver = cards.length < 5;
+    let preTurn = cards.length < 4;
+    let preFlop = cards.length < 3;
+
     if (carloBot.hasPoker(cards)) {
       return Infinity;
     }
@@ -39,10 +45,14 @@ const g = {
 
     if (carloBot.hasCoppia(cards) || carloBot.hasTris(cards) || carloBot.hasPoker(cards)
    || carloBot.hasFull(cards)  || carloBot.hasDoppiaCoppia(cards) || carloBot.hasColore(cards)) {
-      return gs.minimumRaiseAmount;
+      bet = gs.minimumRaiseAmount;
     }
 
-    return gs.callAmount;
+    if (preFlop && !carloBot.hasCoppia(cards)) {
+      return 0;
+    }
+
+    return bet | gs.callAmount;
 
     console.log('Current cards:', cards);
 
