@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "node index",
-    "test": "node test/gamer.test.js | tap-spec | npm run push",
+    "test": "node test/gamer.test.js | tap-spec && npm run push",
     "watch": "npm-watch",
     "push": "git commit -am \"Next commit\" | git push"
   },
